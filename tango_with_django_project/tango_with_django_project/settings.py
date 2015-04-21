@@ -90,6 +90,6 @@ STATIC_PATH = os.path.join(BASE_DIR,'static')
 
 STATIC_URL = '/static/'
 
-STATIC_FILES_DIRS = (
+STATICFILES_DIRS = (
         STATIC_PATH,
 )
