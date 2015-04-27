@@ -6,6 +6,6 @@ admin.site.register(Page)
 
 
 class PageAdmin(admin.ModelAdmin):
-    fields ['category', 'title', 'url']
+    fields = ['category', 'title', 'url']
 
 admin.site.register(Page, PageAdmin)
