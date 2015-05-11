@@ -18,7 +18,7 @@ def category(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
         context_dict['category_name'] = category.name
-        page = Page.objects.filter(category=category)
+        pages = Page.objects.filter(category=category)
         context_dict['pages'] = pages
         context_dict['category'] = category
     except Category.DoesNotExist:
