@@ -1,2 +1,2 @@
 # code
-TangoWithDjango Tutorial project
+My learning experience with the TangoWithDjango Tutorial project
