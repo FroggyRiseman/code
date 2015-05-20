@@ -18,14 +18,9 @@
             {% else %}
                 <strong>No pages currently in category.</strong>
             {% endif %}
+            <a href="/category/{{ category_name_slug }}/add_page/">Add a Page</a><br />
         {% else %}
             The specified category {{ category_name }} does not exist!
-        {% endif %}
-
-        {% if category %}
-            <a href="/category/category_name_url/add_page/">Add a Page</a><br />
-        {% else %}
-            The specified category does not exist, therefore, you cannot create a page here.
         {% endif %}
 
     </body>
