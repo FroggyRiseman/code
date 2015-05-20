@@ -21,6 +21,13 @@
         {% else %}
             The specified category {{ category_name }} does not exist!
         {% endif %}
+
+        {% if category %}
+            <a href="/category/add_page/">Add a Page</a><br />
+        {% else %}
+            The specified category does not exist, therefore, you cannot create a page here.
+        {% endif %}
+
     </body>
 
 </html>
