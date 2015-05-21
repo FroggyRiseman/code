@@ -49,7 +49,7 @@ def add_category(request):
     else:
         form = CategoryForm()
 
-    return render(request, 'rango/add_category.html',{'form': form})
+    return render(request, 'rango/add_category.html', {'form': form})
 
 
 def add_page(request, category_name_slug):
