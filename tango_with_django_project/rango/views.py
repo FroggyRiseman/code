@@ -69,9 +69,9 @@ def add_page(request, category_name_slug):
                 page.save()
                 return category(request, category_name_slug)
         else:
-                print form.errors
+            print form.errors
     else:
-            form = PageForm()
+        form = PageForm()
 
     context_dict = {'form': form, 'category': cat, 'category_name_slug': category_name_slug}
 
