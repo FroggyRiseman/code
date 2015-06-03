@@ -24,7 +24,7 @@ def index(request):
     
     if 'last_visit' in request.COOKIES:
         last_visit = request.COOKIES['last_visit']
-        last_visit_time = datetime.strptime(last_visit[:-7], "%Y-%m-%d %H:%M:%:S")
+        last_visit_time = datetime.strptime(last_visit[:-7], "%Y-%m-%d %H:%M:%S")
 
         if (datetime.now() - last_visit_time).days > 0:
             visits = visits + 1
