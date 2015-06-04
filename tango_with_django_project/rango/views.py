@@ -26,7 +26,7 @@ def index(request):
         last_visit_time = datetime.strptime(last_visit[:-7], "%Y-%m-%d %H:%M:%S")
 
         if (datetime.now() - last_visit_time).days > 0:
-            visits = visits +1
+            visits = visits + 1
             reset_last_visit_time = True
 
     else:
@@ -44,7 +44,12 @@ def index(request):
 
     
 def about(request):
-    return render(request, 'rango/about.html', {})
+    if request.session.get('visits'):
+        count = request.session.get('visits')
+    else:
+        count = 0
+
+    return render(request, 'rango/about.html', {'visits': count})
 
 
 def category(request, category_name_slug):
