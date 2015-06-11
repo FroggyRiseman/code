@@ -6,10 +6,17 @@
 
 {% block body_block %}
 
-    <h1>About</h1>
-    <p>Rango says this is the about page.
-    <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango"/>
+    <div class="page-header">
+        <h1>About</h1>
+    </div>
+
+    <div>
+        <p>This is <strong>Rango's about page.</strong><br />
+        <p>You've visited the site on <strong>{{ visits }} occasion(s).</strong><br />
+        <p>Here's a picture of Rango!<br />
+
+        <img width="90" height="100" src="{% static "images/rango.jpg" %}" alt="Picture of Rango"/>
+    </div>
     
-    <p>visits: {{ visits }}</p>
 
 {% endblock %}
