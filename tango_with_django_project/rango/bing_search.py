@@ -1,5 +1,5 @@
 import json
-import urlib, urllib2
+import urllib, urllib2
 
 from keys import BING_API_KEY
 
@@ -25,14 +25,14 @@ def run_query(search_terms):
     username = ''
 
     password_mgr = urllib2.HTTPPasswordMgrWithDefaultRealm()
-    password_mg.add_password(None, search_url, username, BING_API_KEY)
+    password_mgr.add_password(None, search_url, username, BING_API_KEY)
 
     results = []
 
     try:
         handler = urllib2.HTTPBasicAuthHandler(password_mgr)
         opener = urllib2.build_opener(handler)
-        urlib2.install_opener(opener)
+        urllib2.install_opener(opener)
 
         response = urllib2.urlopen(search_url).read()
 
