@@ -3,8 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from rango.models import Category
-from rango.models import Page
+from rango.models import Category, Page
+from rango.models import UserProfile
 
 from rango.forms import CategoryForm
 from rango.forms import PageForm
@@ -219,3 +219,6 @@ def track_url(request):
                 pass
 
     return redirect(url)
+
+
+def register_profile(request):
